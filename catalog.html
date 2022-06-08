@@ -7,9 +7,9 @@
   </head>
   <body>
     <header>
-      <span class="visually-hidden home">
       <a class="navigation-logo" href="index.html">
-        На главную
+        <img class="page-header-logo" alt="Мини Логотип Седоны." src="Images\Header\logo.svg">
+        <span class="visually-hidden">На главную</span>
       </a>
     </span>
       <nav class="navigation">
@@ -40,25 +40,24 @@
            </span></a>
         </li>
         <li class="navigation-item">
-          <button name="want">Хочу сюда</button>
+          <a class="navigation-link" href="#">хочу сюда</a>
         </li>
       </ul>
     </header>
 
     <main class="main-catalog">
       <section class="catalog-header">
-        <section>
-          <h1 class="catalog-header-title  ">Гостинницы Седоны</h1>
-          <ol class="breadcrumbs">
+        <div>
+          <h1 class="catalog-header-title  ">Гостиницы Седоны</h1>
+          <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
-              <img alt="домой" src="Images\Hotels\breadcrubs-home.svg">
               <a class="breadcrumbs-link visually-hidden" href="index.html">Главная</a>
             </li>
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link">Гостинницы</a>
             </li>
-          </ol>
-        </section>
+          </ul>
+        </div>
 
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <section>
@@ -73,13 +72,13 @@
                 </li>
                 <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name ="Parking" checked>
+                      <input class="control-input" type="checkbox" name ="parking" checked>
                       <span>Парковка</span>
                     </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name ="WI-FI">
+                    <input class="control-input" type="checkbox" name ="wi-fi">
                     <span>WI-FI</span>
                   </label>
                 </li>
@@ -91,19 +90,19 @@
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="radio" name="product-group" value="Hotel" checked>
+                    <input class="control-input" type="radio" name="product-group" value="hotel" checked>
                     <span>Отель</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="radio" name="product-group" value="Motel">
+                    <input class="control-input" type="radio" name="product-group" value="motel">
                     <span>Мотель</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="radio" name="product-group" value="Apartments">
+                    <input class="control-input" type="radio" name="product-group" value="apartments">
                     <span>Апартаменты</span>
                   </label>
                 </li>
@@ -115,23 +114,17 @@
             <section>
               <p>Стоимость, ₽:</p>
               <div class="price">
-                <div>
-                  <label><input type="number" name="to" placeholder="0"></label>
-                  <label><input type="number" name="from" placeholder="9000"></label>
-                </div>
-                <label><input type="range" min="0" max="9000" value="7000" class="slider"></label>
-              </div>
             </section>
             <section>
-              <input type="submit" value="Применить">
-              <input type="reset" value="Применить">
+              <button type="submit">применить</button>
+              <button type="reset">сбросить</button>
             </section>
           </section>
         </form>
       </section>
 
       <section>
-          <h2>Найдено гостиниц: 38</h2>
+          <p>Найдено гостиниц: 38</p>
           <section>
             <select class="select-control" aria-label="Сортировка">
             <option value="popular">Сначала дешёвое</option>
@@ -154,7 +147,7 @@
         <li class="catalog-product-card">
           <a class="hotel-card-link" href="#">
             <img class="hotel-card-image" src="Images\Hotels\Amara Resort & Spa.jpg" alt="Гостиница Амара">
-            <span class="hotel-card-title">Amara Resort & Spa</span>
+            <h2 class="hotel-card-title">Amara Resort & Spa</h2>
           </a>
           <section>
             <span class="hotel-type">Гостиница</span>
@@ -172,7 +165,7 @@
         <li class="catalog-product-card">
           <a class="hotel-card-link" href="#">
             <img class="hotel-card-image" src="Images\Hotels\Villas at Poco Diablo.jpg" alt="Villas at Poco Diablo">
-            <span class="hotel-card-title">Villas at Poco Diablo</span>
+            <h2 class="hotel-card-title">Villas at Poco Diablo</h2>
           </a>
           <section>
             <span class="hotel-type">Гостиница</span>
@@ -190,7 +183,7 @@
         <li class="catalog-product-card">
           <a class="hotel-card-link" href="#">
             <img class="hotel-card-image" src="Images\Hotels\Desert Quail Inn.jpg" alt="Desert Quail Inn">
-            <span class="hotel-card-title">Desert Quail Inn</span>
+            <h2 class="hotel-card-title">Desert Quail Inn</h2>
           </a>
           <section>
             <span class="hotel-type">Гостиница</span>
@@ -208,7 +201,7 @@
         <li class="catalog-product-card">
           <a class="hotel-card-link" href="#">
             <img class="hotel-card-image" src="Images\Hotels\GreenTree Inn.jpg" alt="GreenTree Inn">
-            <span class="hotel-card-title">GreenTree Inn</span>
+            <h2 class="hotel-card-title">GreenTree Inn</h2>
           </a>
           <section>
             <span class="hotel-type">Гостиница</span>
@@ -228,7 +221,7 @@
       <section class="pagination">
         <ul class="pages">
           <li class="page">
-            <a class="pagination-link pagination-current pagination-disabled">1</a>
+            <a class="pagination-link pagination-current ">1</a>
           </li>
           <li class="page">
             <a class="pagination-link" href="#">2</a>
@@ -261,9 +254,9 @@
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label>
-            <input class="field" placeholder="Ващ e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
+            <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
           </label>
-          <input type="submit" value="Подписаться">
+          <button>Подписаться</button>
         </form>
       </section>
     </main>
@@ -292,6 +285,7 @@
       </address>
 
       <a target="_blank" class="developer-logo" href="https://htmlacademy.ru/">
+        <img class="img-developer-logo" alt="Логотип сайта разработчика" src="Images\Footer\logo_htmlacademy.svg">
       </a>
     </footer>
   </body>
